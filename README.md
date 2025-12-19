@@ -156,8 +156,7 @@ The script evaluates methods using:
 
 ### 5.1 Fit quality
 
-* **RMSE**:  
-$\mathrm{RMSE} = \sqrt{\frac{1}{m}\sum_{i=1}^{m}(y_i - \hat{y}_i)^2}.$
+**RMSE**: $\mathrm{RMSE} = \sqrt{\frac{1}{m}\sum_{i=1}^{m}(y_i - \hat{y}_i)^2}.$
 
 **Coefficient of determination** ($R^2$): $= 1 - \frac{\sum_{i=1}^{m}(y_i-\hat{y}_i)^2}{\sum_{i=1}^{m}(y_i-\bar{y})^2}, \quad \bar{y} = \frac{1}{m}\sum_{i=1}^{m}y_i.$
 
