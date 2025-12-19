@@ -159,23 +159,16 @@ The script evaluates methods using:
 * **RMSE**:  
 $\mathrm{RMSE} = \sqrt{\frac{1}{m}\sum_{i=1}^{m}(y_i - \hat{y}_i)^2}.$
 
-* **Coefficient of determination** ($R^2$):
-  $$
-  R^2 = 1 - \frac{\sum_{i=1}^{m}(y_i-\hat{y}_i)^2}{\sum_{i=1}^{m}(y_i-\bar{y})^2},
-  \quad \bar{y} = \frac{1}{m}\sum_{i=1}^{m}y_i.
-  $$
+* **Coefficient of determination** ($R^2$):  
+$R^2 = 1 - \frac{\sum_{i=1}^{m}(y_i-\hat{y}_i)^2}{\sum_{i=1}^{m}(y_i-\bar{y})^2}, \quad \bar{y} = \frac{1}{m}\sum_{i=1}^{m}y_i.$
 
 ### 5.2 Conditioning / stability indicators
 
-* **Condition number** (2-norm):
-  $$
-  \kappa_2(X) = \|X\|_2\,\|X^{-1}\|_2.
-  $$
+* **Condition number** (2-norm):  
+$\kappa_2(X) = \|X\|_2\,\|X^{-1}\|_2.$
 
-* **Relative coefficient error** vs MATLAB QR:
-  $$
-  \frac{\|\beta_{\text{method}} - \beta_{\text{QR}}\|_2}{\|\beta_{\text{QR}}\|_2}.
-  $$
+* **Relative coefficient error** vs MATLAB QR:  
+$\frac{\|\beta_{\text{method}} - \beta_{\text{QR}}\|_2}{\|\beta_{\text{QR}}\|_2}.$
 
 ### 5.3 Runtime and flop estimates
 
