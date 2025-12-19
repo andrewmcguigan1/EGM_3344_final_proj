@@ -1,0 +1,14 @@
+# MATLAB
+*.asv
+*.m~
+*.mex*
+*.mat
+*.fig
+*.slx
+*.mdl
+*.autosave
+*.slxc
+*.sldd
+*.slxp
+slprj/
+*.original
