@@ -110,13 +110,13 @@ which is a big reason QR methods are typically stable for least squares.
 Givens rotations eliminate individual subdiagonal entries with a 2D rotation. For entries
 $a = R_{j,j}$ and $g = R_{i,j}$, choose $c$ and $s$ so that:
 
-$
+$$
 \begin{bmatrix} c & -s \\ s & c \end{bmatrix}
 \begin{bmatrix} a \\ g \end{bmatrix}
 =
 \begin{bmatrix} r \\ 0 \end{bmatrix},
 \;\;\; r = \sqrt{a^2 + g^2},\;\;\; c = \frac{a}{r},\;\;\; s = -\frac{g}{r}.
-$
+$$
 
 Applying these rotations across columns transforms $X$ into an upper-triangular $R$. Applying the
 same rotations to the right-hand side $y$ yields $Q^T y$ without explicitly forming $Q$.
