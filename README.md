@@ -14,8 +14,7 @@ as the regression model becomes more complex (higher polynomial degree).
 In aerodynamic design and analysis, it is common to model a relationship such as lift coefficient
 $C_L$ versus angle of attack $\alpha$ using data from experiments or simulations. A simple linear
 model can be useful, but real data often shows curvature and nonlinearity. Polynomial regression is
-an easy way to increase model flexibility, but (unfortunately for everyone involved) higher-degree
-polynomials can become **numerically unstable**.
+an easy way to increase model flexibility, but higher-degree polynomials can become **numerically unstable**.
 
 This project uses a small dataset of $(\alpha, C_L)$ measurements for NACA 24xx airfoils and explores:
 
@@ -231,7 +230,7 @@ When you run `Project.m`, you should see:
 
 ---
 
-## 8) Practical insights (what you’re supposed to learn here)
+## 8) What I learned in this project
 
 1. **Higher-degree polynomials are not “free accuracy.”** They may reduce training error while
    increasing generalization error (overfitting). LOOCV helps reveal this tradeoff.
