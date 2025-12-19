@@ -150,39 +150,7 @@ conditioned problems.
 
 ---
 
-## 5) Metrics used in the comparisons
-
-The script evaluates methods using:
-
-### 5.1 Fit quality
-
-**RMSE**: $\mathrm{RMSE} = \sqrt{\frac{1}{m}\sum_{i=1}^{m}(y_i - \hat{y}_i)^2}.$
-
-**Coefficient of determination** ($R^2$): $= 1 - \frac{\sum_{i=1}^{m}(y_i-\hat{y}_i)^2}{\sum_{i=1}^{m}(y_i-\bar{y})^2}, \quad \bar{y} = \frac{1}{m}\sum_{i=1}^{m}y_i.$
-
-### 5.2 Conditioning / stability indicators
-
-* **Condition number** (2-norm):  
-$\kappa_2(X) = \|X\|_2\,\|X^{-1}\|_2.$
-
-* **Relative coefficient error** vs MATLAB QR:  
-$\frac{\|\beta_{\text{method}} - \beta_{\text{QR}}\|_2}{\|\beta_{\text{QR}}\|_2}.$
-
-### 5.3 Runtime and flop estimates
-
-`Project.m` measures runtime using `tic/toc` and uses a rough flop estimate used in the script:
-
-$$
-\text{flops} \approx 6mc - 3c(c+1),
-$$
-
-where $m$ is the number of data points and $c$ is the number of columns in $X$ (for a degree-$n$
-polynomial, $c=n+1$). This is an *approximation* meant for comparison, not a perfect instruction-by-
-instruction count.
-
----
-
-## 6) What `Project.m` does (high-level)
+## 5) What `Project.m` does (high-level)
 
 ### Part A: Givens rotation regression (degrees 1 through 6)
 
@@ -197,10 +165,7 @@ For each degree $n$ and each data point $j$:
 
 1. Remove point $j$.
 2. Fit coefficients $\beta^{(-j)}$ using Givens QR.
-3. Predict the left-out point:
-   $$
-   \hat{y}_j = x_j^T\beta^{(-j)}.
-   $$
+3. Predict the left-out point: $\hat{y}_j = x_j^T\beta^{(-j)}. $
 
 It then reports the LOOCV RMSE vs polynomial degree and computes variance of fitted coefficients
 across the LOOCV runs (a rough indicator of coefficient stability).
@@ -219,7 +184,7 @@ For degrees $n=2$ to $25$:
 
 ---
 
-## 7) Requirements and how to run
+## 6) Requirements and how to run
 
 ### Requirements
 
@@ -250,7 +215,7 @@ y = CL_2412;  % or CL_2414, CL_2415
 
 ---
 
-## 8) Expected outputs
+## 7) Expected outputs
 
 When you run `Project.m`, you should see:
 
@@ -266,7 +231,7 @@ When you run `Project.m`, you should see:
 
 ---
 
-## 9) Practical insights (what you’re supposed to learn here)
+## 8) Practical insights (what you’re supposed to learn here)
 
 1. **Higher-degree polynomials are not “free accuracy.”** They may reduce training error while
    increasing generalization error (overfitting). LOOCV helps reveal this tradeoff.
@@ -288,7 +253,7 @@ When you run `Project.m`, you should see:
 
 ---
 
-## 10) Notes / reproducibility
+## 9) Notes / reproducibility
 
 * `tic/toc` timings depend on machine load. For more reliable benchmarking, run multiple trials and
   average.
