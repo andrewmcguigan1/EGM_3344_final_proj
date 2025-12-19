@@ -115,7 +115,7 @@ $
 \begin{bmatrix} a \\ g \end{bmatrix}
 =
 \begin{bmatrix} r \\ 0 \end{bmatrix},
-\quad r = \sqrt{a^2 + g^2},\quad c = \frac{a}{r},\quad s = -\frac{g}{r}.
+\;\;\; r = \sqrt{a^2 + g^2},\;\;\; c = \frac{a}{r},\;\;\; s = -\frac{g}{r}.
 $
 
 Applying these rotations across columns transforms $X$ into an upper-triangular $R$. Applying the
